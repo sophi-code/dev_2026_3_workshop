@@ -34,7 +34,10 @@ class Conversion:
             fahrenheit_a_celsius(32) -> 0.0
             fahrenheit_a_celsius(212) -> 100.0
         """
-        pass
+        resultado = (fahrenheit - 32) * 5/9
+        return 
+
+
     
     def metros_a_pies(self, metros):
         """
@@ -68,8 +71,10 @@ class Conversion:
         Ejemplo:
             pies_a_metros(3.28084) -> 1.0
         """
-        pass
+        resultado = pies * 0.3048
+        return resultado    
     
+
     def decimal_a_binario(self, decimal):
         """
         Convierte un número decimal a su representación binaria.
