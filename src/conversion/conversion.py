@@ -161,7 +161,7 @@ class Conversion:
                 i += 1          
         return resultado
 
-    def texto_a_morse(self, texto):
+    def texto_a_morse(self, texto):                                          
         """
         Convierte texto a código Morse.
         
@@ -175,7 +175,23 @@ class Conversion:
             texto_a_morse("SOS") -> "... --- ..."
             texto_a_morse("HELLO") -> ".... . .-.. .-.. ---"
         """
-        pass
+        morse_dict = {
+            'A': '.-', 'B': '-...', 'C': '-.-.', 'D': '-..', 'E': '.', 
+            'F': '..-.', 'G': '--.', 'H': '....', 'I': '..', 'J': '.---', 
+            'K': '-.-', 'L': '.-..', 'M': '--', 'N': '-.', 'O': '---', 
+            'P': '.--.', 'Q': '--.-', 'R': '.-.', 'S': '...', 'T': '-', 
+            'U': '..-', 'V': '...-', 'W': '.--', 'X': '-..-', 
+            'Y': '-.--', 'Z': '--..',
+            '0': '-----', '1': '.----', '2': '..---', 
+            '3': '...--', '4': '....-', '5': '.....',
+            '6': '-....', '7': '--...', 
+            '8': '---..', 9: 9, 10: 10
+        }
+        resultado = []
+        for char in texto.upper():
+            if char in morse_dict:
+                resultado.append(morse_dict[char])
+        return " ".join(resultado)      
     
     def morse_a_texto(self, morse):
         """
