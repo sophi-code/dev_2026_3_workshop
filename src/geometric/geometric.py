@@ -292,7 +292,9 @@ class Geometria:
         Returns:
             float: Pendiente de la recta
         """
-        pass
+        if x2 - x1 == 0:
+            raise ValueError("La pendiente es indefinida (recta vertical).")
+        return (y2 - y1) / (x2 - x1)    
     
     def ecuacion_recta(self, x1, y1, x2, y2):
         """
