@@ -53,6 +53,7 @@ class Geometria:
         """
         return 2 * 3.14159 * radio
     
+    
     def area_triangulo(self, base, altura):
         """
         Calcula el área de un triángulo.
