@@ -207,4 +207,20 @@ class Conversion:
             morse_a_texto("... --- ...") -> "SOS"
             morse_a_texto(".... . .-.. .-.. ---") -> "HELLO"
         """
-        pass
+        morse_dict = {
+            '.-': 'A', '-...': 'B', '-.-.': 'C', '-..': 'D', '.': 'E',
+            '..-.': 'F', '--.': 'G', '....': 'H', '..': 'I', '.---': 'J',
+            '-.-': 'K', '.-..': 'L', '--': 'M', '-.': 'N', '---': 'O',
+            '.--.': 'P', '--.-': 'Q', '.-.': 'R', '...': 'S', '-': 'T',
+            '..-': 'U', '...-': 'V', '.--': 'W', '-..-': 'X',
+            '-.--': 'Y', '--..': 'Z',
+            '-----': '0', '.----': '1', '..---': '2',
+            '...--': '3', '....-': '4', '.....': '5',
+            '-....': '6', '--...': '7',
+            '---..': '8', 9: 9, 10: 10
+        }
+        resultado = []
+        for code in morse.split('   '):  # Separar palabras por tres espacios
+            palabra = ''.join(morse_dict[char] for char in code.split())
+            resultado.append(palabra)
+        return " ".join(resultado)      
