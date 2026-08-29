@@ -15,8 +15,19 @@ class Games:
             - Tijera vence a papel
             - Papel vence a piedra
         """
-        pass
-    
+        reglas = {
+            "piedra": "tijera",
+            "tijera": "papel",
+            "papel": "piedra"
+        }
+        
+        if jugador1 == jugador2:
+            return "empate"
+        elif reglas[jugador1] == jugador2:
+            return "jugador1"
+        else:
+            return "jugador2"
+
     def adivinar_numero_pista(self, numero_secreto, intento):
         """
         Proporciona pistas para un juego de adivinanza de números.
