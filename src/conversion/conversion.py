@@ -73,7 +73,7 @@ class Conversion:
             pies_a_metros(3.28084) -> 1.0
         """
         resultado = pies * 0.3048
-        return resultado    
+        return resultado           
     
 
     def decimal_a_binario(self, decimal):
