@@ -227,7 +227,12 @@ class Formulas:
         Ejemplo:
             raices_cuadraticas(1, -3, 2) -> (2.0, 1.0)
         """
-        pass
+        discriminante = self.discriminante(a, b, c)
+        if discriminante < 0:
+            raise ValueError("La ecuación no tiene raíces reales.")
+        raiz1 = (-b + discriminante ** 0.5) / (2 * a)
+        raiz2 = (-b - discriminante ** 0.5) / (2 * a)
+        return (raiz1, raiz2)
 
     def imc(self, peso, altura):
         """
