@@ -234,7 +234,7 @@ class Formulas:
         raiz2 = (-b - discriminante ** 0.5) / (2 * a)
         return (raiz1, raiz2)
 
-    def imc(self, peso, altura):
+    def imc(self, peso, altura
         """
         Calcula el Índice de Masa Corporal (IMC).
 
@@ -250,7 +250,7 @@ class Formulas:
         Ejemplo:
             imc(70, 1.75) -> 22.86
         """
-        pass
+        return peso / (altura ** 2) 
 
     def hipotenusa_pitagoras(self, cateto1, cateto2):
         """
@@ -268,4 +268,4 @@ class Formulas:
         Ejemplo:
             hipotenusa_pitagoras(3, 4) -> 5.0
         """
-        pass
+        
