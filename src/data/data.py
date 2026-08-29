@@ -141,7 +141,7 @@ class Data:
             return Pila[-1] if Pila else None
         def is_empty():
             return len(Pila) == 0
-        return {"push": push, "pop": pop, "peek": peek, "is_empty": is_empty}
+        return {"push": push, "pop": pop, "peek": peek, "is_empty": is_empty} 
 
     def implementar_cola(self):
         """
