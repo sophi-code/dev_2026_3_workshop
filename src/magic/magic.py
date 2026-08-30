@@ -137,10 +137,10 @@ class Magic:
         else:
             resultado = 1
             for i in range(2, n + 1):
-                resultado *= i
-            return resultado
+                resultado *= i  
+                return resultado       
             def mcd(self, a, b):
-        "
+        """"
         Calcula el máximo común divisor de dos números.
         
         Args:
@@ -150,7 +150,8 @@ class Magic:
         Returns:
             int: El máximo común divisor de a y b
         """
-        pass
+        while b:
+            a, b = b, a % b                                 
     
     def mcm(self, a, b):
         """
