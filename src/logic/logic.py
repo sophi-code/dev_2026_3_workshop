@@ -27,8 +27,7 @@ class Logica:
         Returns:
             bool: Resultado de a OR b
         """
-        pass
-    
+        return a or b    
     def NOT(self, a):
         """
         Implementa la operación lógica NOT.
