@@ -165,7 +165,9 @@ class Magic:
         Returns:
             int: El mínimo común múltiplo de a y b
         """
-        pass
+        if a == 0 or b == 0:
+            return 0
+        return abs(a * b) // self.mcd(a, b)
     
     def suma_digitos(self, n):
         """
