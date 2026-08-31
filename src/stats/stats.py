@@ -31,7 +31,15 @@ class Stats:
             mediana([1, 2, 3, 4, 5]) -> 3.0
             mediana([1, 2, 3, 4]) -> 2.5
         """
-        pass
+        if not numeros:
+            raise ValueError("La lista de números no puede estar vacía")
+        numeros_ordenados = sorted(numeros)
+        n = len(numeros_ordenados)
+        mitad = n // 2
+        if n % 2 == 0:
+            return (numeros_ordenados[mitad - 1] + numeros_ordenados[mitad]) / 2
+        else:
+            return numeros_ordenados[mitad]
     
     def moda(self, numeros):
         """
