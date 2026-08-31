@@ -12,7 +12,9 @@ class Stats:
         Ejemplo:
             promedio([1, 2, 3, 4, 5]) -> 3.0
         """
-        pass
+        if not numeros:
+            raise ValueError("La lista de números no puede estar vacía")
+        return sum(numeros) / len(numeros)
     
     def mediana(self, numeros):
         """
