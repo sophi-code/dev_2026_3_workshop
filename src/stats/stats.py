@@ -117,4 +117,6 @@ class Stats:
         Ejemplo:
             rango([1, 5, 3, 9, 2]) -> 8
         """
-        pass
+        if not numeros:
+            raise ValueError("La lista de números no puede estar vacía")
+        return max(numeros) - min(numeros)
